@@ -4,7 +4,7 @@ WORKDIR /app
 
 # Install deps
 COPY package*.json ./
-RUN npm ci && npm prune --omit=dev
+RUN npm ci
 
 # Copy the rest of the code
 COPY . .
