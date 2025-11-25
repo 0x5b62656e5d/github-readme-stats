@@ -4,7 +4,7 @@ WORKDIR /app
 
 # Install deps
 COPY package*.json ./
-RUN npm ci --only=production
+RUN npm ci && npm prune --omit=dev
 
 # Copy the rest of the code
 COPY . .
